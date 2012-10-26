@@ -13,7 +13,7 @@
 
 ACTION_PATH=`dirname $0`
 BAKEQTPI=${ACTION_PATH}/bakeqtpi
-BAKEQTPISC=$BAKEQTPI/bakeqtpi_bash
+BAKEQTPISC=$BAKEQTPI/bakeqtpi.bash
 BAKEARG=--httppi
 
 OS=I386
