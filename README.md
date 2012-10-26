@@ -8,6 +8,11 @@ Raspberry Pi用 Rasbian(wheezy hf版)Qt5beta1環境構築スクリプト
   インストールしてくれるスクリプトです。
   (Ubuntu等のDebian系限定です。)
 
+  使用したbakeqtpi
+  git://gist.github.com/3488286.git
+  SHA1 :  1669b5bc45cb1d9c3f8b0b929aaf54ac7d6e9ea5
+
+
 - 実行
   本スクリプトのをgit cloneする。
   $ sudo apt-get install git
@@ -42,6 +47,11 @@ Rasbian(wheezy hf version) Qt5beta1 environmental construction script
     -- installs a required package. 
 
   (It is Debian system limitation of Ubuntu etc.) 
+
+  used bakeqtpi
+  git://gist.github.com/3488286.git
+  SHA1 :  1669b5bc45cb1d9c3f8b0b929aaf54ac7d6e9ea5
+
 
 - Instructions
     -- Install git,this script checkout from git
