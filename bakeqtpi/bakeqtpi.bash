@@ -2,7 +2,7 @@
 #This script will download, set up, compile QT5, and set up the SDCard image ready to use.
 #Pass -h to use https for git
 
-OPT=`dirname $0`
+OPT=~/opt
 CC=$OPT/gcc-4.7-linaro-rpi-gnueabihf
 CCT=$OPT/cross-compile-tools
 MOUNT=/mnt/rasp-pi-rootfs
