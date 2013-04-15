@@ -1,0 +1,3 @@
+[submodule "bakeqtpi"]
+	path = bakeqtpi
+	url = git@github.com:sazus/bakeqtpi.git
