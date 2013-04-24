@@ -92,6 +92,8 @@ dlpackage() {
 
 dlbakeptpi() {
 	if [ ! -d $BAKEQTPI_DIRECTORY/.git ]; then
+	    # submodule(backqtpi)の取得
+	    git submodule init
 	    git submodule update
 	    cd $BAKEQTPI_DIRECTORY
 	    ./$BAKEQTPI_SCRIPT $BAKEQTPI_ARG
