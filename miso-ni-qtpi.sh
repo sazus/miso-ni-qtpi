@@ -12,9 +12,9 @@
 
 
 ACTION_PATH=`dirname $0`
-BAKEQTPI=${ACTION_PATH}/bakeqtpi
-BAKEQTPISC=$BAKEQTPI/bakeqtpi.bash
-BAKEARG=--httppi
+BAKEQTPI_DIRECTORY=${ACTION_PATH}/bakeqtpi
+BAKEQTPI_SCRIPT="bakeqtpi.bash"
+BAKEQTPI_ARG=--httppi
 
 OS=I386
 
@@ -63,7 +63,7 @@ done
 # Error Status Function
 #
 
-function error {
+error() {
 	case "$1" in
 		1) echo "Error making directories"
 		;;
@@ -78,7 +78,7 @@ function error {
 # Install Debian package
 #
 
-function dlpackage {
+dlpackage() {
 	sudo apt-get install build-essential perl python unzip
 	if [ "$OS" == "AMD64" ]; then
 		sudo apt-get install ia32-libs libc6-dev-i386 lib32z1-dev
@@ -90,11 +90,13 @@ function dlpackage {
 # running custom bakeqtpi.bash script
 #
 
-function dlbakeptpi {
-	if [ ! -d $BAKEQTPI/.git ]; then
-		$BAKEQTPISC $BAKEARG
+dlbakeptpi() {
+	if [ ! -d $BAKEQTPI_DIRECTORY/.git ]; then
+	    git submodule update
+	    cd $BAKEQTPI_DIRECTORY
+	    ./$BAKEQTPI_SCRIPT $BAKEQTPI_ARG
 	else
-		error 2
+	    echo "Error Not found $BAKEQTPI_DIRECTORY Directory"
 	fi
 }
 
