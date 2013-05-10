@@ -29,22 +29,13 @@ do
 		-h | -help | --help)
 			# usage
 			echo "Usage"
-			echo "		./miso-ni-qtpi.sh [options]"
-			echo "options:"
-			echo "		32bit		useing i386(32bit) debian os"
-			echo "		64bit		useing amd64(64bit) debian os"
+			echo "		./miso-ni-qtpi.sh"
 			echo ""
 			echo "		--help usage info"
 			echo ""
 			echo ""
 			echo "		Please perform with the path of the same directory as a script."
 			exit
-			;;
-		32bit)
-			OS=I386
-			;;
-		64bit)
-			OS=AMD64
 			;;
 		-- | --* | -*i)
 			echo "No suport Parameter"
@@ -79,8 +70,14 @@ error() {
 #
 
 dlpackage() {
+	UNAME_STRING=$(uname -m)
+	if [ "${UNAME_STRING}" = "x86_64" ]; then
+		OS=AMD64
+	else
+		OS=I386
+	fi
 	sudo apt-get install build-essential perl python unzip
-	if [ "$OS" == "AMD64" ]; then
+	if [ "$OS" = "AMD64" ]; then
 		sudo apt-get install ia32-libs libc6-dev-i386 lib32z1-dev
 	fi
 }
