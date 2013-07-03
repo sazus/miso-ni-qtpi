@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE_RASPBIAN_IMG="../bakeqtpi/opt/2013-02-09-wheezy-raspbian.img"
+FILE_RASPBIAN_IMG="../bakeqtpi/opt/2012-07-15-wheezy-raspbian.img"
 DIR_MOUNT="../bakeqtpi/opt/rasp-pi-rootfs"
 
 if [ -e ${FILE_RASPBIAN_IMG} ]; then
