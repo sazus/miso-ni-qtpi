@@ -1,18 +1,19 @@
-Raspberry Pi用 Rasbian(wheezy hf版)Qt5beta1環境構築スクリプト
+Raspberry Pi用 Rasbian(wheezy hf版)Qt5.1.0rc2環境構築スクリプト
 
 
 - 本スクリプト  
   Beginner’s guide to cross-compile Qt5 on RaspberryPi  
   (http://qt-project.org/wiki/RaspberryPi_Beginners_guide)  
   で紹介されているbakeqtpi.bashを多少カスタマイズして  
-  qt5beta1をクロスコンパイルする時に必要なパッケージを  
+  qt5.q.0rc2をクロスコンパイルする時に必要なパッケージを  
   インストールしてくれるスクリプトです。  
   (Ubuntu等のDebian系限定です。)  
   
   使用したbakeqtpi  
-  git://gist.github.com/3488286.git  
-  SHA1 :  1669b5bc45cb1d9c3f8b0b929aaf54ac7d6e9ea5  
-
+  git://gitorious.org/bakeqtpi/bakeqtpi.git  
+  SHA1 :  d4b537732d0e0e522824c38f3b2bd2ff3131bdbe
+  本家はSDK用のgitからcheckoutしていますが、このリポジトリ
+  では、Qt5のリポジトリからcheckoutするようにしています。
 
 - 実行  
     本スクリプトのをgit cloneする。  
@@ -20,10 +21,7 @@ Raspberry Pi用 Rasbian(wheezy hf版)Qt5beta1環境構築スクリプト
         $ cd ~  
         $ git clone git://github.com/sazus/miso-ni-qtpi.git  
         $ cd ./miso-ni-qtpi  
-        [32bit OS]  
-        $ ./miso-ni-qtpi.sh 32bit  
-        [64bit OS]  
-        $ ./miso-ni-qtpi.sh 64bit  
+        $ ./miso-ni-qtpi.sh
   
 - 動作確認  
     (HOST PC)  
@@ -31,12 +29,11 @@ Raspberry Pi用 Rasbian(wheezy hf版)Qt5beta1環境構築スクリプト
         Ubuntu 12.04LTS(32bit / 64bit)  
   
     (Target SD image)  
-        2012-08-16_wheezy_raspbian.img  
-        2012-09-18_wheezy_raspbian.img  
+        2013-05-25-wheezy-raspbian.img
     にて確認。  
   
 ---------------------------------------------------------------------
-Rasbian(wheezy hf version) Qt5beta1 environmental construction script
+Rasbian(wheezy hf version) Qt5.1.0rc2 environmental construction script
  for Raspberry Pi(Rasbian wheezy Hard-float version)   
 
 
@@ -45,14 +42,14 @@ Rasbian(wheezy hf version) Qt5beta1 environmental construction script
     cross-compile Qt5 on RaspberryPi  
     (http://qt-project.org/wiki/RaspberryPi_Beginners_guide)  
         this script customized.  
-        -- cross compiling qt5beta1.  
+        -- cross compiling qt5.1.0rc2.  
         -- installs a required package.  
   
     (It is Debian system limitation of Ubuntu etc.)  
   
     used bakeqtpi  
-        git://gist.github.com/3488286.git  
-        SHA1 :  1669b5bc45cb1d9c3f8b0b929aaf54ac7d6e9ea5  
+        git://gitorious.org/bakeqtpi/bakeqtpi.git  
+        SHA1 :  d4b537732d0e0e522824c38f3b2bd2ff3131bdbe
   
   
 - Instructions  
@@ -63,10 +60,7 @@ Rasbian(wheezy hf version) Qt5beta1 environmental construction script
   
     -- running this script  
        $ cd ./miso-ni-qtpi  
-       [32bit OS]  
-       $ ./miso-ni-qtpi.sh 32bit  
-       [64bit OS]  
-       $ ./miso-ni-qtpi.sh 64bit  
+       $ ./miso-ni-qtpi.sh
   
 - Check Platform  
   (HOST PC)  
@@ -74,7 +68,6 @@ Rasbian(wheezy hf version) Qt5beta1 environmental construction script
     Ubuntu 12.04LTS(32bit / 64bit)  
   
   (Target SD image)  
-    2012-08-16_wheezy_raspbian.img  
-    2012-09-18_wheezy_raspbian.img  
+    2013-05-25-wheezy-raspbian.img
 
 
