@@ -1,11 +1,11 @@
-Raspberry Pi用 Rasbian(wheezy hf版)Qt5.1.0rc2環境構築スクリプト
+Raspberry Pi用 Rasbian(wheezy hf版)Qt5.1.0環境構築スクリプト
 
 
 - 本スクリプト  
   Beginner’s guide to cross-compile Qt5 on RaspberryPi  
   (http://qt-project.org/wiki/RaspberryPi_Beginners_guide)  
   で紹介されているbakeqtpi.bashを多少カスタマイズして  
-  qt5.q.0rc2をクロスコンパイルする時に必要なパッケージを  
+  qt5.1.0をクロスコンパイルする時に必要なパッケージも  
   インストールしてくれるスクリプトです。  
   (Ubuntu等のDebian系限定です。)  
   
@@ -33,7 +33,7 @@ Raspberry Pi用 Rasbian(wheezy hf版)Qt5.1.0rc2環境構築スクリプト
     にて確認。  
   
 ---------------------------------------------------------------------
-Rasbian(wheezy hf version) Qt5.1.0rc2 environmental construction script
+Rasbian(wheezy hf version) Qt5.1.0 environmental construction script
  for Raspberry Pi(Rasbian wheezy Hard-float version)   
 
 
@@ -42,7 +42,7 @@ Rasbian(wheezy hf version) Qt5.1.0rc2 environmental construction script
     cross-compile Qt5 on RaspberryPi  
     (http://qt-project.org/wiki/RaspberryPi_Beginners_guide)  
         this script customized.  
-        -- cross compiling qt5.1.0rc2.  
+        -- cross compiling qt5.1.0.  
         -- installs a required package.  
   
     (It is Debian system limitation of Ubuntu etc.)  
